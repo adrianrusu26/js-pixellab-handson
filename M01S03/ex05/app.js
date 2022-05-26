@@ -14,7 +14,7 @@ var person = {
     {
       name: 'Steven',
       surname: 'Stevenson',
-      age: 46,
+      age: 31,
     },
 
     {
@@ -24,3 +24,35 @@ var person = {
     },
   ],
 };
+
+console.warn(
+  `Afiseaza propozitia: “Ma numesc xxx yyy si stiu html si css.” Foloseste notatia cu paranteze patrate`,
+);
+
+console.log(
+  'Ma numesc ' +
+    person.name +
+    ' ' +
+    person.surname +
+    ' si stiu ' +
+    person.skills[0] +
+    ' si ' +
+    person.skills[2] +
+    '.',
+);
+
+console.warn(`"Sunt Adrian si acum invat JavaScript.".`);
+
+console.log('Sunt ' + person.name + ' si acum invat ' + 'JavaScript' + '.');
+
+console.log(
+  `Am ` +
+    person.friends.length +
+    ' prieteni: ' +
+    person.friends[0].name +
+    ', ' +
+    person.friends[1].name +
+    ' si ' +
+    person.friends[2].name +
+    '.',
+);
