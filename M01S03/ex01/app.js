@@ -2,6 +2,8 @@ var object = {
   name: 'Adrian',
   surname: 'Rusu',
   age: 28,
+  petOwner: false,
+  carOwner: false,
 };
 
 console.log(object.name);
@@ -13,12 +15,12 @@ console.log(
     object.name +
     ' ' +
     object.surname +
-    ' ' +
-    'si am' +
+    ' si am' +
     ' ' +
     object.age +
     ' ' +
-    'ani',
+    'ani' +
+    '.',
 );
 
 console.warn(
@@ -26,3 +28,17 @@ console.warn(
 );
 
 console.log(2022 - object.age.toString());
+
+console.warn(
+  `Metoda console.log ar fi trebuit chemata cu valoarea: "Adrian Rusu are 28 ani.".`,
+);
+
+console.log(
+  object.name + ' ' + object.surname + ' are' + ' ' + object.age + ' ani' + '.',
+);
+
+console.warn(
+  `Metoda console.log ar fi trebuit chemata cu valoarea: "Adrian s-a nascut in 1994.".`,
+);
+
+console.log(object.name + ' s-a nascut in' + ' ' + (2022 - object.age) + '.');
