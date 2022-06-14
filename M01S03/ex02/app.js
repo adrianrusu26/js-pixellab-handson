@@ -61,7 +61,7 @@ console.log(person.friends.steven.surname.length.toString());
 
 console.log(person.friends.carol.age.toString());
 
-console.log(2022 - person.friends.larry.age.toString());
+console.log((2022 - person.friends.larry.age).toString());
 
 console.warn(`Prietenul meu Steven Stevenson are 31 ani.`);
 console.log(
@@ -117,4 +117,34 @@ console.warn(
   `Afiseaza numarul de caractere al numelui de familie al lui Larry`,
 );
 
-console.log();
+console.log(person.friends.larry.surname.length.toString());
+
+console.warn(
+  `Calculeaza diferenta dintre numarul de caractere al numelor lui Steven si Carol.`,
+);
+
+console.log(
+  (
+    person.friends.steven.name.length - person.friends.carol.name.length
+  ).toString(),
+);
+
+console.warn(
+  `Afiseaza propozitia: “Prietenii mei sunt: Larry, Carol si Steven.”`,
+);
+
+console.log(
+  'Prietenii mei sunt: ' +
+    person.friends.larry.name +
+    ', ' +
+    person.friends.carol.name +
+    ' si ' +
+    person.friends.steven.name +
+    '.',
+);
+
+console.warn(
+  `Folosind anul curent calculeaza si afiseaza anul de nastere al lui Steven.`,
+);
+
+console.log((2022 - person.friends.steven.age).toString());

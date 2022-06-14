@@ -27,7 +27,7 @@ console.warn(
   `Afiseaza anul in care te-ai nascut scazand varsta pe care ai trecut-o in obiect din anul curent (un proces numit hardcodare)`,
 );
 
-console.log(2022 - object.age.toString());
+console.log((2022 - object.age).toString());
 
 console.warn(
   `Metoda console.log ar fi trebuit chemata cu valoarea: "Adrian Rusu are 28 ani.".`,
