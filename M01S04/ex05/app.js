@@ -17,7 +17,17 @@ if (isNaN(number) === true) {
   number = defaultNumber;
 }
 
-for (i = 6; i <= 100; i++) {
+var superiorlimit = prompt('Introdu limita superioara pentru interval');
+
+// for (i = 6; i <= 100; i++) {
+//   console.log(i);
+//   if (i % number !== 0) {
+//     continue;
+//   }
+//   console.log(`Acest numar este multiplu de ${number}`);
+// }
+
+for (i = 1; i <= superiorlimit; i++) {
   console.log(i);
   if (i % number !== 0) {
     continue;
