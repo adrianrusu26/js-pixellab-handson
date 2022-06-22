@@ -122,31 +122,19 @@ console.log(sum2.toString());
 
 console.warn(`Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani. Intre Dragos si Steven... ", doar daca varsta prietenului este impara.
 `);
-var message = '';
-var message1 = 'Intre ';
-var message2 = ' si ';
-var message3 = ' este o diferenta de ';
-var message4 = ' ani';
 
 for (i = 0; i < person.friends.length; i++) {
   var friend = person.friends[i];
   var punctuation = '.';
   var friendAge = person.friends[i].age;
   var ageDiff = Math.abs(person.age - friendAge);
+  var message = '';
 
   if (friendAge % 2 !== 0) {
-    message =
-      message1 +
-      person.name +
-      message2 +
-      friend.name +
-      message3 +
-      ageDiff +
-      message4 +
-      punctuation;
+    message = `Intre ${person.name} si ${friend.name} este o diferenta de ${ageDiff} ani. `;
   }
-  console.log(message);
 }
+console.log(message);
 
 console.warn(`Folosind obiectul person si un for, afiseaza in consola skillurile pe care le are persoana
 `);
@@ -209,30 +197,16 @@ console.warn(
   `Afiseaza fraza: "Intre Dragos si Larry este o diferenta de xx ani. Intre Dragos si Steven... ". Repeta pentru tot arrayul friends.`,
 );
 
-var message = '';
-var message1 = 'Intre ';
-var message2 = ' si ';
-var message3 = ' este o diferenta de ';
-var message4 = ' ani';
-
 for (var i = 0; i < person.friends.length; i++) {
+  var message = '';
   var friend = person.friends[i];
   var punctuation = '.';
   var friendAge = person.friends[i].age;
   var ageDiff = Math.abs(person.age - friendAge);
 
-  message =
-    message1 +
-    person.name +
-    message2 +
-    friend.name +
-    message3 +
-    ageDiff +
-    message4 +
-    punctuation;
-
-  console.log(message);
+  message = `Intre ${person.name} si ${friend.name} este o diferenta de ${ageDiff} ani. `;
 }
+console.log(message);
 
 console.warn(
   `Afiseaza fraza “Prietenii mei sunt: xxx yyy, xxx yyy, xxx yyy.” in ordine inversa a arrayului de prieteni. (Numarand de la length la 0).`,
