@@ -8,7 +8,7 @@ const person = {
   },
 };
 
-function accesor(methodSuffix) {
+function accessor(methodSuffix) {
   const methodName = `get${methodSuffix}`;
 
   // return person.GetName
@@ -16,12 +16,12 @@ function accesor(methodSuffix) {
   return person[methodName]();
 }
 
-const personName = accesor('Name');
-const personAge = accesor('Age');
+const personName = accessor('Name');
+const personAge = accessor('Age');
 const currentYear = new Date().getFullYear();
-const personBirthYear = currentYear - accesor('Age');
+const personBirthYear = currentYear - accessor('Age');
 
-console.warn(`Folosind accesorul salveaza numele mic al persoanei intr-o variabila si foloseste-l in propozitia: “Eu sunt xxx.”
+console.warn(`Folosind accessorul salveaza numele mic al persoanei intr-o variabila si foloseste-l in propozitia: “Eu sunt xxx.”
 `);
 
 console.log(`Eu sunt ${personName}.`);
@@ -38,9 +38,9 @@ console.log(
   `Ma numesc ${personName}, am ${personAge} ani si m-am nascut in anul ${personBirthYear}.`,
 );
 
-console.warn(`Folosind accesorul afiseaza numele persoanei.`);
+console.warn(`Folosind accessorul afiseaza numele persoanei.`);
 
-console.log(accesor('Name'));
+console.log(accessor('Name'));
 
 console.warn(`Afiseaza varsta persoanei.`);
 
