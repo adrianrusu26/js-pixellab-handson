@@ -2,6 +2,7 @@ const controls = document.querySelector('.controls');
 const heroElement = document.querySelector('.hero');
 const stageElement = document.querySelector('.stage');
 const step = 30;
+// maps
 const axis = {
   N: 'y',
   S: 'y',
@@ -13,7 +14,15 @@ const direction = {
   S: 'fw',
   W: 'back',
   E: 'fw',
+  ArrowDown: 'fw',
+  ArrowUp: 'back',
 };
+
+const arrowMap = {
+  ArrowDown: 'y',
+  ArrowUp: 'y',
+};
+
 const hero = {
   x: 0,
   y: 0,
@@ -37,6 +46,21 @@ controls.addEventListener('click', function (event) {
 
   updateHeroPosition(currentAxis, currentDirection);
 
+  renderHero(hero);
+});
+
+document.addEventListener('keydown', (event) => {
+  const arrowPressed = event.code;
+
+  // early return
+  if (!arrowPressed.startsWith('Arrow')) {
+    return;
+  }
+
+  const currentAxis = arrowMap[arrowPressed];
+  const currentDirection = direction[arrowPressed];
+
+  updateHeroPosition(currentAxis, currentDirection);
   renderHero(hero);
 });
 
